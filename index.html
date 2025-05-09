@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prescribed Fire Readiness Checklist</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Prescribed Fire Go / No-Go Checklist</h1>
+                <p>If the answer to any item belpw is "NO", <strong>DO NOT</strong> burn unitl corrected.</p>
+            </header>
+
+        <!-- Checklist Form -->
+            <form id="checklist-form">
+
+            <!-- Project Info -->
+                <section>
+                    <label for="burn-name">Burn Name:</label>
+                    <input type="text" id="burn-name" name="burnName" required>
+                    <label for="burn-county">County</label>
+                    <input type="text" id="burn-county" name="burnCounty" placeholder="County">
+                    <label for="burn-date">Date of Burn:</label>
+                    <input type="date" id="burn-date" name="burnDate" required>
+                </section>
+
+            <!-- Burn Ban Section -->
+                <fieldset>
+                    <legend>Burn Ban</legend>
+                    
+                    <div class="checklist-item">
+                        <p></p>
+                        <label for="burn-ban">Yes</label>
+                        <input type="checkbox" id="burn-ban" name="burnBan">
+                        <label for="burn-ban">No</label>
+                        <input type="checkbox" id="burn-ban" name="burnBan">
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="exemption-granted" name="exemptionGranted">
+                        <label for="exemption-granted">Exemption to Burn Ban Granted</label>
+                        <input type="text" placeholder="Notes..." class="notes">
+                    </div>
+                    <div>
+                        <label for="date-granted">Date Exepmtion Granted</label>
+                        <input type="date" id="date-granted" name="dateGranted">
+                    </div>
+                    
+                </fieldset>
+            
+            <!-- Buttons -->
+                <div class="form-buttons">
+                    <button type="submit">Save Checklist</button>
+                    <button type="button" id="pdf-btn">Download PDF</button>
+                    <button type="button" id="reset-btn">Reset</button>
+                </div>
+
+            </form>
+        </div>
+
+        <script src="main.js"></script>
+        
+    </body>
+</html>
